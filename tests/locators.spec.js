@@ -14,6 +14,13 @@ test('locators', async ({page})=>{
     //approach 2
     await page.click('id=login2');
 
+    //provide username using css
+    // await page.locator('#loginusername').fill("max");
+    //or
+    await page.fill('#loginusername', 'max');
+
+    //to provide password
+    await page.fill("input[id='loginpassword']",'test123');
 
 
 });
